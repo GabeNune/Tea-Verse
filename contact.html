@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Tea Verse - Contato</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="img/logo without text.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+<header>
+  <div class="header h-[120px] md:h-[120px] bg-[#1b4332] flex items-center">
+    <nav class="content-header flex items-center w-full px-4 md:px-16 h-full relative">
+      <div class="header-brand flex items-center min-w-[120px] h-full">
+        <img src="img/logo_with_text.png" alt="Tea Verse Logo" class="logo-img h-[80px] md:h-[120px] w-auto mr-4 md:mr-10 object-contain" />
+        <div class="logo-text hidden md:block">
+          <h1 class="brand-title text-white text-2xl font-bold">Tea Verse</h1>
+          <p class="brand-tagline text-green-100 text-sm">Natureza em cada xícara</p>
+        </div>
+      </div>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="block md:hidden ml-auto text-white focus:outline-none" aria-label="Abrir menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+      <!-- Navigation Links -->
+      <div id="nav-links" class="nav-links flex-1 flex justify-center items-center gap-4 md:gap-7 text-lg md:text-xl
+        md:flex
+        absolute md:static top-[100%] left-0 w-full bg-[#1b4332] md:bg-transparent flex-col md:flex-row
+        transition-all duration-300
+        hidden md:flex z-20">
+        <a href="index.html" class="text-white hover:text-green-200 transition py-2 md:py-0">Quem somos?</a>
+        <a href="about.html" class="text-white hover:text-green-200 transition py-2 md:py-0">Chás</a>
+        <a href="contact.html" class="text-white hover:text-green-200 transition py-2 md:py-0">Contato</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="hero_section">
+  <div class="hero-image flex flex-col items-center justify-center min-h-[calc(100vh-120px-150px)] w-full bg-cover bg-center" style="background-image: url('img/pexels-osmachko-230477.jpg'); filter: saturate(1.3) contrast(1.1);">
+    <div class="text-hero w-full flex flex-col items-center px-4 md:px-0">
+      <h1 class="tea-title mb-8 text-3xl md:text-5xl text-[#cfb682] font-serif text-center drop-shadow">Entre em contato conosco</h1>
+      <form name="form1" method="get" onsubmit="return processarformulario()" netlify class="bg-[#1b4332] bg-opacity-95 rounded-xl p-5 md:p-8 shadow-md max-w-lg w-full mx-auto text-white">
+        <div class="mb-4">
+          <label for="nome" class="block mb-1 font-semibold text-white">Nome Completo:</label>
+          <input type="text" name="nome" id="nome" class="w-full border rounded px-3 py-2 bg-[#245943] text-white" maxlength="50" required />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block mb-1 font-semibold text-white">E-mail:</label>
+          <input type="text" name="email" id="email" class="w-full border rounded px-3 py-2 bg-[#245943] text-white" maxlength="50" required />
+        </div>
+        <div class="mb-4">
+          <label for="telefone" class="block mb-1 font-semibold text-white">Telefone:</label>
+          <input type="text" name="telefone" id="telefone" class="w-full border rounded px-3 py-2 bg-[#245943] text-white" maxlength="15" required />
+        </div>
+        <div class="mb-4">
+          <label for="avaliacao" class="block mb-1 font-semibold text-white">Avalie-nos:</label>
+          <select name="avaliacao" id="avaliacao" class="w-full border rounded px-3 py-2 bg-[#245943] text-white" required>
+            <option>Selecione</option>
+            <option>1 Estrela</option>
+            <option>2 Estrelas</option>
+            <option>3 Estrelas</option>
+            <option>4 Estrelas</option>
+            <option>5 Estrelas</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="mensagem" class="block mb-1 font-semibold text-white">Mensagem:</label>
+          <textarea name="mensagem" id="mensagem" rows="7" maxlength="500" class="w-full border rounded px-3 py-2 bg-[#245943] text-white"></textarea>
+        </div>
+        <div class="flex gap-4">
+          <input type="submit" value="Enviar" class="bg-green-700 text-white px-6 py-2 rounded cursor-pointer hover:bg-green-800 transition" />
+          <input type="reset" value="Limpar" class="bg-gray-300 text-gray-800 px-6 py-2 rounded cursor-pointer hover:bg-gray-400 transition" />
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 min-h-[150px] px-4 md:px-10 bg-[#1b4332]">
+    <div class="anchor-footer flex items-center mb-4 md:mb-0">
+      <a href="#"><img src="img/anchor.png" width="80" class="md:w-[100px]" alt="Anchor"></a>
+    </div>
+    <div class="text-footer flex flex-col items-center justify-center">
+      <h5 class="text-white text-center text-base md:text-lg">Gabriel Nunes 2025 - &copy; Todos os direitos reservados</h5>
+      <h5 class="text-white text-center text-base md:text-lg">Trabalho Acadêmico sem fins lucrativos</h5>
+    </div>
+  </div>
+</footer>
+<script>
+  // Hamburger menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('hidden');
+  });
+  // Optional: close menu when a link is clicked (for better UX)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(window.innerWidth < 768) navLinks.classList.add('hidden');
+    });
+  });
+
+  // Form validation (same as before)
+  function validar() {
+    var nome = form1.nome.value;
+    var telefone = form1.telefone.value;
+    var email = form1.email.value;
+    var avaliacao = form1.avaliacao.value;
+
+    if (nome == "") {
+      alert('Por favor, preencha o campo Nome!');
+      form1.nome.focus();
+      return false;
+    }
+    if (email == "") {
+      alert('Por favor, preencha o campo E-mail!');
+      form1.email.focus();
+      return false;
+    }
+    if (telefone == "") {
+      alert('Por favor, preencha o campo Telefone!');
+      form1.telefone.focus();
+      return false;
+    }
+    if (avaliacao == "Selecione") {
+      alert('Por favor, selecione uma avaliação!');
+      form1.avaliacao.focus();
+      return false;
+    }
+    return true;
+  }
+  function processarformulario() {
+    if (validar()) {
+      alert('Formulário enviado com sucesso!');
+      return true;
+    }
+    return false;
+  }
+</script>
+</body>
+</html>
